@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai Krishna — Website Developer & Freelance Web Designer</title>
+    <meta name="description" content="Sai Krishna is a website developer and freelance web designer from Vijayawada, India, building modern, responsive websites for businesses and individuals.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sai Krishna — Website Developer & Freelance Web Designer">
+    <meta property="og:description" content="Building modern, responsive websites for businesses and individuals.">
+    <meta property="og:type" content="website">
+
+    {% load static %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="nav-logo-badge">PDSK</span>
+                <span class="nav-logo-text">Sai Krishna Pabolu</span>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <span id="themeIcon">🌙</span>
+            </button>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            
+        </div>
+    </nav>
+
+    <!-- ===================== HOME / HERO ===================== -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <p class="hero-greeting reveal">Hello, I'm</p>
+                <h1 class="hero-name reveal">Sai Krishna Pabolu</h1>
+                <h2 class="hero-title reveal">Website Developer &amp; Freelance Web Designer</h2>
+                <p class="hero-description reveal">
+                    I build modern, responsive, and practical websites for businesses,
+                    startups, and individuals. Based in Vijayawada, India.
+                </p>
+                <div class="hero-buttons reveal">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-visual reveal">
+    <div class="hero-photo-wrapper">
+        <img
+            src="{% static 'images/picture.jpeg' %}"
+            alt="Sai Krishna - Website Developer"
+            class="hero-photo"
+        >
+    </div>
+</div>
+        <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+            <span class="mouse"><span class="mouse-wheel"></span></span>
+        </a>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">About Me</span>
+                <h2 class="section-title">Get to know me</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <p>
+                        I am a recent <strong>B.Sc. Computer Science</strong> graduate and
+                        aspiring Website Developer &amp; Freelance Web Designer. I am
+                        passionate about building modern business websites, responsive web
+                        applications, and practical software projects.
+                    </p>
+                    <p>
+                        I also have an interest in payroll and business application
+                        development. I enjoy turning ideas into clean, functional websites
+                        that help businesses establish a strong online presence.
+                    </p>
+                    <div class="about-info">
+                        <div class="about-info-item">
+                            <span class="about-info-label">Name</span>
+                            <span class="about-info-value">Sai Krishna Pabolu</span>
+                        </div>
+                        <div class="about-info-item">
+                            <span class="about-info-label">Location</span>
+                            <span class="about-info-value">Vijayawada, Andhra Pradesh, India</span>
+                        </div>
+                        <div class="about-info-item">
+                            <span class="about-info-label">Education</span>
+                            <span class="about-info-value">B.Sc. Computer Science</span>
+                        </div>
+                        <div class="about-info-item">
+                            <span class="about-info-label">Role</span>
+                            <span class="about-info-value">Website Developer &amp; Freelance Web Designer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-cards reveal">
+                    <div class="about-card">
+                        <div class="about-card-icon">&#127891;</div>
+                        <h3 class="about-card-title">Education</h3>
+                        <p class="about-card-text">B.Sc. Computer Science Graduate</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-card-icon">&#128187;</div>
+                        <h3 class="about-card-title">Development</h3>
+                        <p class="about-card-text">Frontend &amp; Backend with Django</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-card-icon">&#128640;</div>
+                        <h3 class="about-card-title">Freelancing</h3>
+                        <p class="about-card-text">Available for website projects</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section class="section section-alt" id="skills">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">Skills</span>
+                <h2 class="section-title">Technologies I work with</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card reveal">
+                    <div class="skill-icon skill-html">&lt;/&gt;</div>
+                    <h3 class="skill-name">HTML</h3>
+                    <p class="skill-desc">Semantic markup</p>
+                </div>
+                <div class="skill-card reveal">
+                    <div class="skill-icon skill-css">&#127912;</div>
+                    <h3 class="skill-name">CSS</h3>
+                    <p class="skill-desc">Modern styling &amp; animations</p>
+                </div>
+                <div class="skill-card reveal">
+                    <div class="skill-icon skill-js">JS</div>
+                    <h3 class="skill-name">JavaScript</h3>
+                    <p class="skill-desc">Interactive web pages</p>
+                </div>
+                <div class="skill-card reveal">
+                    <div class="skill-icon skill-py">&#128013;</div>
+                    <h3 class="skill-name">Python</h3>
+                    <p class="skill-desc">Backend programming</p>
+                </div>
+                <div class="skill-card reveal">
+                    <div class="skill-icon skill-django">Dj</div>
+                    <h3 class="skill-name">Django</h3>
+                    <p class="skill-desc">Web framework</p>
+                </div>
+                <div class="skill-card reveal">
+                    <div class="skill-icon skill-mysql">&#128451;</div>
+                    <h3 class="skill-name">MySQL</h3>
+                    <p class="skill-desc">Database management</p>
+                </div>
+                <div class="skill-card reveal">
+                    <div class="skill-icon skill-git">&#128279;</div>
+                    <h3 class="skill-name">Git &amp; GitHub</h3>
+                    <p class="skill-desc">Version control</p>
+                </div>
+                <div class="skill-card reveal">
+                    <div class="skill-icon skill-excel">&#128202;</div>
+                    <h3 class="skill-name">MS Excel</h3>
+                    <p class="skill-desc">Data &amp; reporting</p>
+                </div>
+                <div class="skill-card reveal">
+                    <div class="skill-icon skill-responsive">&#128241;</div>
+                    <h3 class="skill-name">Responsive Design</h3>
+                    <p class="skill-desc">Mobile-first layouts</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">Projects</span>
+                <h2 class="section-title">My Work</h2>
+            </div>
+            <div class="projects-grid">
+                <!-- AgriGrow -->
+                <!-- Urban Services -->
+<article class="project-card reveal">
+    <div class="project-image">
+        <img
+            src="{% static 'images/urban_services.png' %}"
+            alt="Urban Services Project"
+            class="project-photo"
+        >
+    </div>
+
+    <div class="project-body">
+        <h3 class="project-title">Urban Services</h3>
+
+        <p class="project-desc">
+            A service platform designed to help users find and access
+            different local services through a simple and user-friendly website.
+        </p>
+
+        <div class="project-tech">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Django</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">JavaScript</span>
+        </div>
+
+        <div class="project-links">
+            <a
+                href="https://github.com/krishna-054/urban-services"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-small btn-outline"
+            >
+                View Code
+            </a>
+
+            <a
+    href="{% static 'videos/urban_services.mp4' %}"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="btn btn-small btn-primary"
+>
+    Watch Demo
+</a>
+        </div>
+    </div>
+</article>
+
+                <!-- Business Website -->
+                <article class="project-card reveal">
+                    <div class="project-image">
+                        <div class="project-image-placeholder">
+                            <span>Business Website</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">Business Website</h3>
+                        <p class="project-desc">A responsive business website with a modern design, service pages, and a contact form for small and local businesses.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Django</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-small btn-outline" onclick="return false;">GitHub</a>
+                            <a href="#" class="btn btn-small btn-primary" onclick="return false;">Live Demo</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Movie Review Website -->
+                <article class="project-card reveal">
+                    <div class="project-image">
+                        <div class="project-image-placeholder">
+                            <span>Movie Review</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">Movie Review Website</h3>
+                        <p class="project-desc">A website where users can browse movies, read reviews, and share their own ratings and opinions.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">HTML5</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-small btn-outline" onclick="return false;">GitHub</a>
+                            <a href="#" class="btn btn-small btn-primary" onclick="return false;">Live Demo</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Payroll Management System -->
+                <article class="project-card reveal">
+                    <div class="project-image">
+                        <div class="project-image-placeholder">
+                            <span>Payroll System</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">Payroll Management System</h3>
+                        <p class="project-desc">A payroll application to manage employees, salary structures, attendance, payroll calculations, and payslips.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-small btn-outline" onclick="return false;">GitHub</a>
+                            <a href="#" class="btn btn-small btn-primary" onclick="return false;">Live Demo</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SERVICES ===================== -->
+    <section class="section section-alt" id="services">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">Services</span>
+                <h2 class="section-title">What I can do for you</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-icon">&#127760;</div>
+                    <h3 class="service-title">Business Website Development</h3>
+                    <p class="service-desc">Professional websites tailored to your business goals and brand identity.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">&#128100;</div>
+                    <h3 class="service-title">Portfolio Website Development</h3>
+                    <p class="service-desc">Personal portfolio sites that showcase your work and skills.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">&#128221;</div>
+                    <h3 class="service-title">Landing Page Development</h3>
+                    <p class="service-desc">High-converting landing pages designed to drive engagement.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">&#128295;</div>
+                    <h3 class="service-title">Website Maintenance</h3>
+                    <p class="service-desc">Ongoing updates and fixes to keep your site running smoothly.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">&#128241;</div>
+                    <h3 class="service-title">Responsive Website Design</h3>
+                    <p class="service-desc">Mobile-first designs that look great on every device.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- ===================== EDUCATION ===================== -->
+<section class="section" id="education">
+    <div class="container">
+
+        <div class="section-header reveal">
+            <span class="section-eyebrow">Education</span>
+            <h2 class="section-title">Academic Background</h2>
+        </div>
+
+        <div class="education-timeline">
+
+            <!-- B.Sc -->
+            <div class="education-item reveal">
+                <div class="education-marker"></div>
+
+                <div class="education-content">
+                    <div class="education-icon">&#127891;</div>
+
+                    <h3 class="education-degree">
+                        B.Sc. Computer Science
+                    </h3>
+
+                    <p class="education-school">
+                        K.B.N. College / Krishna University
+                    </p>
+
+                    <p class="education-year">
+                        2023 — 2026
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- Intermediate -->
+            <div class="education-item reveal">
+                <div class="education-marker"></div>
+
+                <div class="education-content">
+                    <div class="education-icon">&#127891;</div>
+
+                    <h3 class="education-degree">
+                        Intermediate — M.E.C
+                    </h3>
+
+                    <p class="education-school">
+                        Sri Sastra Junior College, Gollapudi
+                    </p>
+
+                    <p class="education-year">
+                        2021 — 2023
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- SSC -->
+            <div class="education-item reveal">
+                <div class="education-marker"></div>
+
+                <div class="education-content">
+                    <div class="education-icon">&#127891;</div>
+
+                    <h3 class="education-degree">
+                        SSC
+                    </h3>
+
+                    <p class="education-school">
+                        G.N.R.M.C. High School, Vijayawada
+                    </p>
+
+                    <p class="education-year">
+                        2021
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section section-alt" id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">Contact</span>
+                <h2 class="section-title">Let's work together</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <h3>Get in touch</h3>
+                    <p>Have a project in mind or need a website? Send me a message and I'll get back to you.</p>
+                    <div class="contact-info-item">
+                        <span class="contact-info-icon">&#128205;</span>
+                        <div>
+                            <strong>Location</strong>
+                            <p>Vijayawada, Andhra Pradesh, India</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <span class="contact-info-icon">&#9993;</span>
+                        <div>
+                            <strong>Email</strong>
+                            <p>saiKrishnapabolu62@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <span class="contact-info-icon">&#128241;</span>
+                        <div>
+                            <strong>Phone</strong>
+                            <p>+91 8247239353</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrap reveal">
+                    <!-- Django messages -->
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+                        {% endfor %}
+                    {% endif %}
+
+                    <form method="post" action="" class="contact-form" id="contactForm">
+                        {% csrf_token %}
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="id_name">Name</label>
+                                {{ form.name }}
+                                {% if form.name.errors %}
+                                    <span class="form-error">{{ form.name.errors|join:", " }}</span>
+                                {% endif %}
+                            </div>
+                            <div class="form-group">
+                                <label for="id_email">Email</label>
+                                {{ form.email }}
+                                {% if form.email.errors %}
+                                    <span class="form-error">{{ form.email.errors|join:", " }}</span>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="id_phone">Phone</label>
+                                {{ form.phone }}
+                                {% if form.phone.errors %}
+                                    <span class="form-error">{{ form.phone.errors|join:", " }}</span>
+                                {% endif %}
+                            </div>
+                            <div class="form-group">
+                                <label for="id_subject">Subject</label>
+                                {{ form.subject }}
+                                {% if form.subject.errors %}
+                                    <span class="form-error">{{ form.subject.errors|join:", " }}</span>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="id_message">Message</label>
+                            {{ form.message }}
+                            {% if form.message.errors %}
+                                <span class="form-error">{{ form.message.errors|join:", " }}</span>
+                            {% endif %}
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#home" class="footer-logo">
+                    <span class="nav-logo-badge">SK</span>
+                    <span>Sai Krishna</span>
+                </a>
+                <p class="footer-text">Website Developer &amp; Freelance Web Designer</p>
+                <p class="footer-location">Vijayawada, Andhra Pradesh, India</p>
+                <p class="footer-copy">&copy; <span id="currentYear"></span> Sai Krishna. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===================== BACK TO TOP ===================== -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <span>&uarr;</span>
+    </button>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
