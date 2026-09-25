@@ -5,10 +5,11 @@ The homepage renders the portfolio template and also handles
 contact form submission (POST) and display (GET).
 """
 
+import os
+import requests
+
 from django.shortcuts import render
 from django.contrib import messages
-from django.core.mail import send_mail
-from django.conf import settings
 from .forms import ContactForm
 
 
@@ -21,26 +22,44 @@ def index(request):
         if form.is_valid():
             contact = form.save()
 
-            send_mail(
-                subject=f"New Portfolio Enquiry: {contact.subject}",
-                message=(
-                    f"Name: {contact.name}\n"
-                    f"Email: {contact.email}\n"
-                    f"Phone: {contact.phone}\n"
-                    f"Subject: {contact.subject}\n\n"
-                    f"Message:\n{contact.message}"
-                ),
-                from_email=settings.EMAIL_HOST_USER,
-                recipient_list=[settings.CONTACT_RECEIVER_EMAIL],
-                fail_silently=False,
+            subject = f"New Portfolio Enquiry: {contact.subject}"
+
+            message = (
+                f"Name: {contact.name}\n"
+                f"Email: {contact.email}\n"
+                f"Phone: {contact.phone}\n"
+                f"Subject: {contact.subject}\n\n"
+                f"Message:\n{contact.message}"
             )
 
-            messages.success(
-                request,
-                'Thank you! Your message has been sent successfully.'
+            resend_api_key = os.environ.get('RESEND_API_KEY')
+
+            response = requests.post(
+                'https://api.resend.com/emails',
+                headers={
+                    'Authorization': f'Bearer {resend_api_key}',
+                    'Content-Type': 'application/json',
+                },
+                json={
+                    'from': 'Portfolio <onboarding@resend.dev>',
+                    'to': [os.environ.get('CONTACT_RECEIVER_EMAIL')],
+                    'subject': subject,
+                    'text': message,
+                },
+                timeout=15,
             )
 
-            form = ContactForm()
+            if response.ok:
+                messages.success(
+                    request,
+                    'Thank you! Your message has been sent successfully.'
+                )
+                form = ContactForm()
+            else:
+                messages.error(
+                    request,
+                    'Your message was saved, but the email notification could not be sent.'
+                )
 
         else:
             messages.error(
