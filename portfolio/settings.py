@@ -88,27 +88,19 @@ ASGI_APPLICATION = 'portfolio.asgi.application'
 #
 # If DB_NAME is set in .env, we use MySQL. Otherwise we fall back to SQLite
 # so the project runs out of the box for development and testing.
-_db_name = os.environ.get('DB_NAME', '')
-
-if _db_name:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': _db_name,
-            'USER': os.environ.get('DB_USER', 'root'),
-            'PASSWORD': os.environ.get('DB_PASSWORD', ''),
-            'HOST': os.environ.get('DB_HOST', 'localhost'),
-            'PORT': os.environ.get('DB_PORT', '3306'),
-        }
+# ---------------------------------------------------------------------------
+# Database — PostgreSQL
+# ---------------------------------------------------------------------------
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('DB_NAME', 'portfolio_db'),
+        'USER': os.environ.get('DB_USER', 'postgres'),
+        'PASSWORD': os.environ.get('DB_PASSWORD', 'root@1234567'),
+        'HOST': os.environ.get('DB_HOST', 'localhost'),
+        'PORT': os.environ.get('DB_PORT', '5432'),
     }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
-
+}
 # ---------------------------------------------------------------------------
 # Password validation
 # ---------------------------------------------------------------------------
