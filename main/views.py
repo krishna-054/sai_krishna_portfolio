@@ -42,7 +42,7 @@ def index(request):
                 },
                 json={
                     'from': 'Portfolio <onboarding@resend.dev>',
-                    'to': [os.environ.get('CONTACT_RECEIVER_EMAIL')],
+                    'to': os.environ.get('CONTACT_RECEIVER_EMAIL'),
                     'subject': subject,
                     'text': message,
                 },
