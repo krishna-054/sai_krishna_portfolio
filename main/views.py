@@ -55,10 +55,14 @@ def index(request):
                     'Thank you! Your message has been sent successfully.'
                 )
                 form = ContactForm()
+           
             else:
+                print("RESEND ERROR STATUS:", response.status_code)
+                print("RESEND ERROR BODY:", response.text)
+
                 messages.error(
-                    request,
-                    'Your message was saved, but the email notification could not be sent.'
+                request,
+                'Your message was saved, but the email notification could not be sent.'
                 )
 
         else:
