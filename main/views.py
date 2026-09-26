@@ -33,6 +33,9 @@ def index(request):
             )
 
             resend_api_key = os.environ.get('RESEND_API_KEY')
+            recipient = os.environ.get('CONTACT_RECEIVER_EMAIL')
+            print("CONTACT_RECEIVER_EMAIL TYPE:", type(recipient).__name__)
+            print("CONTACT_RECEIVER_EMAIL LENGTH:", len(recipient) if recipient else 0)
 
             response = requests.post(
                 'https://api.resend.com/emails',
@@ -42,7 +45,7 @@ def index(request):
                 },
                 json={
                     'from': 'Portfolio <onboarding@resend.dev>',
-                    'to': os.environ.get('CONTACT_RECEIVER_EMAIL'),
+                    'to': recipient,
                     'subject': subject,
                     'text': message,
                 },
