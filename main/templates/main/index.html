@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sai Krishna — Website Developer & Freelance Web Designer</title>
@@ -36,9 +37,7 @@
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
 
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-                <span id="themeIcon">🌙</span>
-            </button>
+            
 
             <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
                 <span class="hamburger"></span>
@@ -517,94 +516,127 @@
 </section>
 
     <!-- ===================== CONTACT ===================== -->
-    <section class="section section-alt" id="contact">
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="section-eyebrow">Contact</span>
-                <h2 class="section-title">Let's work together</h2>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-info reveal">
-                    <h3>Get in touch</h3>
-                    <p>Have a project in mind or need a website? Send me a message and I'll get back to you.</p>
-                    <div class="contact-info-item">
-                        <span class="contact-info-icon">&#128205;</span>
-                        <div>
-                            <strong>Location</strong>
-                            <p>Vijayawada, Andhra Pradesh, India</p>
-                        </div>
-                    </div>
-                    <div class="contact-info-item">
-                        <span class="contact-info-icon">&#9993;</span>
-                        <div>
-                            <strong>Email</strong>
-                            <p>saiKrishnapabolu62@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-info-item">
-                        <span class="contact-info-icon">&#128241;</span>
-                        <div>
-                            <strong>Phone</strong>
-                            <p>+91 8247239353</p>
-                        </div>
-                    </div>
-                </div>
+<section class="section contact-section" id="contact">
+    <div class="container">
 
-                <div class="contact-form-wrap reveal">
-                    <!-- Django messages -->
-                    {% if messages %}
-                        {% for message in messages %}
-                            <div class="alert alert-{{ message.tags }}">{{ message }}</div>
-                        {% endfor %}
-                    {% endif %}
-
-                    <form method="post" action="" class="contact-form" id="contactForm">
-                        {% csrf_token %}
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="id_name">Name</label>
-                                {{ form.name }}
-                                {% if form.name.errors %}
-                                    <span class="form-error">{{ form.name.errors|join:", " }}</span>
-                                {% endif %}
-                            </div>
-                            <div class="form-group">
-                                <label for="id_email">Email</label>
-                                {{ form.email }}
-                                {% if form.email.errors %}
-                                    <span class="form-error">{{ form.email.errors|join:", " }}</span>
-                                {% endif %}
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="id_phone">Phone</label>
-                                {{ form.phone }}
-                                {% if form.phone.errors %}
-                                    <span class="form-error">{{ form.phone.errors|join:", " }}</span>
-                                {% endif %}
-                            </div>
-                            <div class="form-group">
-                                <label for="id_subject">Subject</label>
-                                {{ form.subject }}
-                                {% if form.subject.errors %}
-                                    <span class="form-error">{{ form.subject.errors|join:", " }}</span>
-                                {% endif %}
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="id_message">Message</label>
-                            {{ form.message }}
-                            {% if form.message.errors %}
-                                <span class="form-error">{{ form.message.errors|join:", " }}</span>
-                            {% endif %}
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
-                    </form>
-                </div>
-            </div>
+        <div class="section-header reveal">
+            <span class="section-eyebrow">Contact</span>
+            <h2 class="section-title">Let's Work Together</h2>
         </div>
-    </section>
+
+        <div class="contact-grid">
+
+            <!-- Left: CTA -->
+            <div class="contact-intro reveal">
+                <h3>Need a Professional Website?</h3>
+
+                <p>
+                    I create modern, responsive websites for local businesses,
+                    startups, and personal brands.
+                </p>
+
+                <p>
+                    Have a project in mind? Let's discuss your requirements
+                    and build something professional for your business.
+                </p>
+
+                <div class="contact-buttons">
+                    <a
+                        href="https://wa.me/918247239353"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-primary"
+                    >
+                        <i class="fab fa-whatsapp"></i>
+                        Chat on WhatsApp
+                    </a>
+
+                    <a
+                        href="tel:+918247239353"
+                        class="btn btn-outline"
+                    >
+                        <i class="fas fa-phone"></i>
+                        Call Me
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right: Contact Details -->
+            <div class="contact-details reveal">
+
+<div class="contact-item">
+    <div class="contact-icon">
+        <i class="fa-solid fa-location-dot"></i>
+    </div>
+
+    <div>
+        <span class="contact-label">Location</span>
+        <h4>Vijayawada, Andhra Pradesh</h4>
+    </div>
+</div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+
+                    <div>
+                        <span class="contact-label">Phone</span>
+                        <h4>
+                            <a href="tel:+918247239353">
+                                +91 82472 39353
+                            </a>
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+
+                    <div>
+                        <span class="contact-label">Email</span>
+                        <h4>
+                            <a href="mailto:saikrishnapabolu62@gmail.com">
+                                saikrishnapabolu62@gmail.com
+                            </a>
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+
+                    <div>
+                        <span class="contact-label">Availability</span>
+                        <h4>Available for Freelance Projects</h4>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Bottom CTA -->
+        <div class="contact-cta reveal">
+            <h3>Let's Build Something Great Together.</h3>
+
+            <p>
+                Website • Business Website • Restaurant • Salon • Gym
+            </p>
+
+            <a href="https://wa.me/918247239353"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn btn-primary">
+                Start a Conversation
+            </a>
+        </div>
+
+    </div>
+</section>
 
     <!-- ===================== FOOTER ===================== -->
     <footer class="footer">

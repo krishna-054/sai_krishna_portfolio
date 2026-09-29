@@ -32,15 +32,13 @@
     --error-500: #ef4444;
 
     /* Neutrals — Light theme (default) */
-    --bg:          #f8fafc;
-    --bg-alt:      #f1f5f9;
-    --card:        #ffffff;
-    --text:        #0f172a;
-    --text-muted:  #64748b;
-    --border:      #e2e8f0;
-    --shadow:      0 1px 3px rgba(0,0,0,0.08);
-    --shadow-md:   0 4px 12px rgba(0,0,0,0.08);
-    --shadow-lg:   0 12px 32px rgba(0,0,0,0.10);
+    --bg: #020617;
+--bg-alt: #0f172a;
+--card: #1e293b;
+--text: #f8fafc;
+--text-muted: #94a3b8;
+--border: #334155;
+    
 
     /* Typography */
     --font-body: 'Inter', system-ui, -apple-system, sans-serif;
@@ -200,13 +198,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
     background: transparent;
     transition: all 0.3s ease;
 }
-.navbar.scrolled {
-    background: rgba(248,250,252,0.85);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-    box-shadow: var(--shadow);
-}
-[data-theme="dark"] .navbar.scrolled { background: rgba(2,6,23,0.85); }
+
 
 .nav-container {
     max-width: var(--max-width);
@@ -298,8 +290,16 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
     inset: 0;
     z-index: -1;
     background-image:
-        radial-gradient(ellipse at 80% 20%, rgba(222, 230, 233, 0.915), transparent 50%),
-        radial-gradient(ellipse at 20% 60%, rgba(20,184,166,0.10), transparent 50%);
+        radial-gradient(
+            ellipse at 80% 20%,
+            rgba(51, 128, 252, 0.12),
+            transparent 50%
+        ),
+        radial-gradient(
+            ellipse at 20% 60%,
+            rgba(20, 184, 166, 0.10),
+            transparent 50%
+        );
 }
 
 .hero .container {
@@ -960,54 +960,89 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 /* Dark mode */
 
 body.dark-mode {
+
     --background-color: #0f172a;
+
     --surface-color: #1e293b;
+
     --text-color: #f8fafc;
+
     --secondary-text-color: #cbd5e1;
+
     --border-color: #334155;
+
 }
 
 body.dark-mode .navbar {
+
     background: rgba(15, 23, 42, 0.95);
+
 }
 
 body.dark-mode .nav-link {
+
     color: #f8fafc;
+
 }
 
 body.dark-mode .nav-link:hover,
+
 body.dark-mode .nav-link.active {
+
     color: #60a5fa;
+
 }
 
 body.dark-mode .theme-toggle {
+
     background: #1e293b;
+
     color: #f8fafc;
+
 }
 
 body.dark-mode section {
+
     background-color: #0f172a;
+
 }
 
 body.dark-mode .card,
+
 body.dark-mode .project-card,
+
 body.dark-mode .service-card {
+
     background-color: #1e293b;
+
     border-color: #334155;
+
 }
 
 body.dark-mode input,
+.navbar.scrolled {
+    background: rgba(2, 6, 23, 0.90);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
 body.dark-mode textarea {
+
     background-color: #1e293b;
+
     color: #f8fafc;
+
     border-color: #334155;
+
 }
 
 body.dark-mode input::placeholder,
-body.dark-mode textarea::placeholder {
-    color: #94a3b8;
-}
 
+body.dark-mode textarea::placeholder {
+
+    color: #94a3b8;
+
+}
 /* Smooth theme transition */
 
 body,
@@ -1086,11 +1121,215 @@ body.dark-mode .nav-logo-text {
 .hero-name {
     color: #2563eb !important;
 }
-
 .project-photo {
     width: 100%;
     height: 100%;
     object-fit: contain;
     display: block;
-    background: #f5f5f5;
+    background: #1e293b;
+}
+
+/* ===================== CONTACT SECTION ===================== */
+
+.contact-section {
+    position: relative;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* Left Side */
+.contact-intro h3 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.contact-intro p {
+    max-width: 600px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.contact-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+/* Contact Details */
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 22px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.contact-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    font-size: 1.1rem;
+}
+
+.contact-label {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.6;
+    margin-bottom: 5px;
+}
+
+.contact-item h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.contact-item a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* Bottom CTA */
+.contact-cta {
+    text-align: center;
+    margin-top: 70px;
+    padding: 50px 30px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.contact-cta h3 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.contact-cta p {
+    margin-bottom: 25px;
+    opacity: 0.7;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        margin-top: 35px;
+    }
+
+    .contact-intro h3 {
+        font-size: 1.8rem;
+    }
+
+    .contact-buttons {
+        flex-direction: column;
+    }
+
+    .contact-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-cta {
+        margin-top: 45px;
+        padding: 35px 20px;
+    }
+
+    .contact-cta h3 {
+        font-size: 1.6rem;
+    }
+}
+
+/* Contact section - dark mode text fix */
+
+.contact-section,
+.contact-section h2,
+.contact-section h3,
+.contact-section h4,
+.contact-section p,
+.contact-section span,
+.contact-section a {
+    color: #ffffff;
+}
+
+.contact-section .contact-label {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.contact-section .contact-intro p,
+.contact-section .contact-cta p {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.contact-section .contact-item {
+    color: #ffffff;
+}
+
+.contact-section .contact-item a {
+    color: #ffffff;
+}
+
+.contact-section .contact-item a:hover {
+    color: #ffffff;
+}
+/* Services section - dark mode text fix */
+
+#services,
+#services h2,
+#services h3,
+#services h4,
+#services p,
+#services span,
+#services a {
+    color: #ffffff;
+}
+
+#services .section-eyebrow {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+#services p {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+#services .service-card {
+    color: #ffffff;
+}
+
+#services .service-card h3,
+#services .service-card h4 {
+    color: #ffffff;
 }
