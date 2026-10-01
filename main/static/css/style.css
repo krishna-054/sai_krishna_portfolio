@@ -1333,3 +1333,145 @@ body.dark-mode .nav-logo-text {
 #services .service-card h4 {
     color: #ffffff;
 }
+
+/* =========================================================
+   FINAL MOBILE RESPONSIVENESS FIX
+   ========================================================= */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+}
+
+.container,
+.nav-container {
+    width: 100%;
+    max-width: 100%;
+}
+
+section,
+.section,
+.contact-section {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Prevent grid children from forcing horizontal overflow */
+.hero-content,
+.hero-visual,
+.about-text,
+.about-cards,
+.contact-intro,
+.contact-details,
+.contact-grid > * {
+    min-width: 0;
+}
+
+/* Contact text should wrap inside the phone */
+.contact-item {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.contact-item h4,
+.contact-item a,
+.contact-item p {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .nav-container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .contact-grid {
+        width: 100%;
+        max-width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .contact-intro {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .contact-intro h3 {
+        font-size: 1.8rem;
+        line-height: 1.25;
+        max-width: 100%;
+    }
+
+    .contact-intro p {
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+
+    .contact-buttons {
+        width: 100%;
+    }
+
+    .contact-buttons .btn {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .contact-details {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .contact-item {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .nav-container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .contact-item {
+        padding: 18px;
+        gap: 14px;
+    }
+
+    .contact-item h4 {
+        font-size: 0.95rem;
+    }
+
+    .contact-intro h3 {
+        font-size: 1.65rem;
+    }
+
+    .contact-cta {
+        width: 100%;
+        max-width: 100%;
+    }
+}
